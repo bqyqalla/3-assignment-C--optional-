@@ -8,14 +8,15 @@ namespace v._39
         public static int GetAge()
         {
             Console.WriteLine("Please Enter Your age");
-            int age = Console.ReadLine();
-
+            int age = int.Parse(Console.ReadLine());
+            
             return age;
         }
 
         //metod plats.
         public static string GetSeat()
         {
+            Console.WriteLine("Seated och Standing ticket?");
             string place = Console.ReadLine();
             if (place != "Seated" && place != "Standig")
             {
@@ -27,9 +28,9 @@ namespace v._39
         }
 
         // Metod summa. 
-        public static decimal GetCost()
+        public static decimal GetCost(int age, string place)
         {
-            string cost = Console.ReadLine();
+            decimal cost = 0; 
             if (place == "Seated")
             {
 
@@ -38,18 +39,18 @@ namespace v._39
                     cost = 50;
                 }
 
-                else if (11 <=age && <65)
+                else if (11 <=age && age <=65)
                 {
                     cost = 170;
                 }
 
-                else (64 < age);
+                else if (64 < age)
                 {
                     cost = 100;
                 }
 
             }
-            if (place == "Standing") ;
+            if (place == "Standing")
             {
 
                 if (age > 11)
@@ -57,12 +58,12 @@ namespace v._39
                     cost = 25;
                 }
 
-                else if (11 <= age && <65)
+                else if (11 <= age && age <= 65)
                 {
                     cost = 110;
                 }
 
-                else (64 < age);
+                else if (64 < age)
                 {
                     cost = 60;
                 }
@@ -75,10 +76,10 @@ namespace v._39
         }
 
         // metod skatt 
-        public static string GetTax()
+        public static decimal GetTax(decimal cost)
         {
 
-            string tax = (1 - (1 / 1.06)) * cost;
+            decimal tax = (decimal)(1 - (1 / 1.06)) * cost;
 
             return tax;
         }

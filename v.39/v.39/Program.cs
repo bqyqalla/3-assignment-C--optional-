@@ -11,9 +11,9 @@ int age = v._39.utility.GetAge();
 string place = v._39.utility.GetSeat();
 
 // Ge pris.
-decimal cost = v._39.utility.GetCost();
+decimal cost = v._39.utility.GetCost(age , place);
 // Visa skatt.
-string tax = v._39.utility.GetTax();
+decimal tax = v._39.utility.GetTax(cost);
 // Visa Biljett.
 int ticket = v._39.utility.TicketNumber();
 
