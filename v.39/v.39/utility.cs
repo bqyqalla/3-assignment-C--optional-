@@ -3,13 +3,14 @@ namespace v._39
 {
     public class utility
     {
+        
 
         //Metod ålder.
         public static int GetAge()
         {
             Console.WriteLine("Please Enter Your age");
             int age = int.Parse(Console.ReadLine());
-            
+
             return age;
         }
 
@@ -30,7 +31,7 @@ namespace v._39
         // Metod summa. 
         public static decimal GetCost(int age, string place)
         {
-            decimal cost = 0; 
+            decimal cost = 0;
             if (place == "Seated")
             {
 
@@ -39,7 +40,7 @@ namespace v._39
                     cost = 50;
                 }
 
-                else if (11 <=age && age <=65)
+                else if (11 <= age && age <= 65)
                 {
                     cost = 170;
                 }
@@ -92,8 +93,32 @@ namespace v._39
             return ticket;
 
         }
+
+        // Optional 1.
+        public static bool CheckPlaceAvailability(string placeList, int ticket)
+        {
+            bool avalible = placeList.Contains(ticket.ToString());
+
+            return !avalible;
+                
+
+
+
+
+        }
+
+        public static string AddPlace(string placeList, int ticket)
+        {
+            string newPlaceList = string.Join(",", placeList, ticket);
+            
+             //add Placenubmer => to placelist
+
+               return newPlaceList;
+        }
+
     }
 }
+
 
 
 

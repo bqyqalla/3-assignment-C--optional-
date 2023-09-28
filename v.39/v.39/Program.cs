@@ -17,24 +17,34 @@ decimal tax = v._39.utility.GetTax(cost);
 // Visa Biljett.
 int ticket = v._39.utility.TicketNumber();
 
-// Ålder
-Console.WriteLine("Please Enter Your age");
 
-// Plats 
-Console.WriteLine("Seated och Standing ticket?");
+
+
+
+
+//Optional 1.
+
+string placeList = "34,1003,389,4100,4890,7233,2855";
+bool avalible = v._39.utility.CheckPlaceAvailability(placeList, ticket);
+
+
+while(!avalible)
+{
+    ticket = v._39.utility.TicketNumber();
+    avalible = v._39.utility.CheckPlaceAvailability(placeList, ticket);
+}
+
+
+
 
 
 //Svar. 
-Console.WriteLine($"Ticket Prise is{cost}kr");
+Console.WriteLine($"Ticket Prise is {cost}kr");
 Console.WriteLine($"Taxammount: {tax}kr");
 Console.WriteLine($"Your Ticket number is:{ticket}");
+Console.WriteLine();
 
-
-
-Console.ReadLine();
-
-
-
+Console.WriteLine("New placelist "+v._39.utility.AddPlace(placeList, ticket));
 
 
 
