@@ -3,7 +3,7 @@ namespace v._39
 {
     public class utility
     {
-        
+
 
         //Metod ålder.
         public static int GetAge()
@@ -15,24 +15,43 @@ namespace v._39
         }
 
         //metod plats.
-        public static string GetSeat()
+        public static FirstStep GetSeat()
         {
             Console.WriteLine("Seated och Standing ticket?");
-            string place = Console.ReadLine();
-            if (place != "Seated" && place != "Standig")
-            {
 
-                Console.WriteLine("Please Enter Seated or Standing");
+            string placeInput = Console.ReadLine();
+
+
+            if (Enum.TryParse(placeInput, out FirstStep place) && Enum.IsDefined(typeof(FirstStep), place))
+            {
+                return place;
+
             }
 
-            return place;
+            else
+
+            {
+                Console.WriteLine("Please Enter Seated or Standing");
+                return place; 
+            }
+
+
+
+
         }
 
+            
+            
+            
+                
+        
+
         // Metod summa. 
-        public static decimal GetCost(int age, string place)
+        public static decimal GetCost(int age, FirstStep place)
         {
+
             decimal cost = 0;
-            if (place == "Seated")
+            if (place == FirstStep.Seated)
             {
 
                 if (age > 11)
@@ -51,7 +70,7 @@ namespace v._39
                 }
 
             }
-            if (place == "Standing")
+            if (place == FirstStep.Standing)
             {
 
                 if (age > 11)
@@ -100,7 +119,7 @@ namespace v._39
             bool avalible = placeList.Contains(ticket.ToString());
 
             return !avalible;
-                
+
 
 
 
@@ -110,15 +129,17 @@ namespace v._39
         public static string AddPlace(string placeList, int ticket)
         {
             string newPlaceList = string.Join(",", placeList, ticket);
-            
-             //add Placenubmer => to placelist
 
-               return newPlaceList;
+            //add Placenubmer => to placelist
+
+            return newPlaceList;
         }
 
+
+
+        
     }
 }
-
 
 
 

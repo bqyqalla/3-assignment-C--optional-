@@ -8,10 +8,10 @@ Console.WriteLine("Book Your Ticket Here");
 // Fråga ålder?
 int age = v._39.utility.GetAge();
 // Fråga plats?
-string place = v._39.utility.GetSeat();
+v._39.FirstStep place = v._39.utility.GetSeat();
 
 // Ge pris.
-decimal cost = v._39.utility.GetCost(age , place);
+decimal cost = v._39.utility.GetCost(age, place);
 // Visa skatt.
 decimal tax = v._39.utility.GetTax(cost);
 // Visa Biljett.
@@ -45,6 +45,9 @@ Console.WriteLine($"Your Ticket number is:{ticket}");
 Console.WriteLine();
 
 Console.WriteLine("New placelist "+v._39.utility.AddPlace(placeList, ticket));
+
+
+
 
 
 
