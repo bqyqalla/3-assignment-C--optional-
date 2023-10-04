@@ -47,7 +47,7 @@ namespace v._39
         
 
         // Metod summa. 
-        public static decimal GetCost(int age, FirstStep place)
+        public static decimal Price(int age, FirstStep place)
         {
 
             decimal cost = 0;
@@ -96,14 +96,6 @@ namespace v._39
         }
 
         // metod skatt 
-        public static decimal GetTax(decimal cost)
-        {
-
-            decimal tax = (decimal)(1 - (1 / 1.06)) * cost;
-
-            return tax;
-        }
-
         public static int TicketNumber()
         {
             Random Random = new();
