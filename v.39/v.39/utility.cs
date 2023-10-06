@@ -96,36 +96,32 @@ namespace v._39
         }
 
         // metod skatt 
-        public static int TicketNumber()
-        {
-            Random Random = new();
-            int ticket = Random.Next(1, 8000);
+       // public static int TicketNumber()
+       // {
+          //  Random Random = new();
+          //  int ticket = Random.Next(1, 8000);
 
-            return ticket;
+           // return ticket;
 
-        }
+       // }
 
         // Optional 1.
-        public static bool CheckPlaceAvailability(string placeList, int ticket)
-        {
-            bool avalible = placeList.Contains(ticket.ToString());
+      //  public static bool CheckPlaceAvailability(string placeList, int ticket)
+       // {
+            //bool avalible = placeList.Contains(ticket.ToString());
 
-            return !avalible;
+           // return !avalible;
 
+       // }
 
-
-
-
-        }
-
-        public static string AddPlace(string placeList, int ticket)
-        {
-            string newPlaceList = string.Join(",", placeList, ticket);
+      //  public static string AddPlace(string placeList, int ticket)
+       // {
+         //   string newPlaceList = string.Join(",", placeList, ticket);
 
             //add Placenubmer => to placelist
 
-            return newPlaceList;
-        }
+      //      return newPlaceList;
+       // }
 
 
 

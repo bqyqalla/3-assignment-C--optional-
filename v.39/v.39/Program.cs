@@ -53,9 +53,20 @@ Console.WriteLine("Hello, World!");
 Ticket ticket = new Ticket(24, FirstStep.Seated);
 
 
-Console.WriteLine(ticket.Age);
-Console.WriteLine(ticket.Place);
-Console.WriteLine(ticket.Price());
-Console.WriteLine(ticket.Tax(ticket.Price()));
+ Console.WriteLine(ticket.Age);
+ Console.WriteLine(ticket.Place);
+ Console.WriteLine(ticket.Price());
+ Console.WriteLine(ticket.Tax(ticket.Price()));
 
+
+
+TicketSalesManager salesManager = new TicketSalesManager();
+
+
+salesManager.AddTicket(new Ticket(11, FirstStep.Seated));
+salesManager.AddTicket(new Ticket(11, FirstStep.Seated));
+salesManager.AddTicket(new Ticket(11, FirstStep.Seated));
+
+
+Console.WriteLine(salesManager.SalesTotal());
 
