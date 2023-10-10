@@ -1,30 +1,29 @@
 ﻿<Properties StartupConfiguration="{125A2DD8-D32B-4904-AA06-86CB9987DBFA}|Default">
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.v.39 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="v.39/EventActivity.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="v.39/Ticket.cs">
     <Files>
       <File FileName="v.39/Program.cs" />
-      <File FileName="v.39/utility.cs" Line="47" Column="18" />
-      <File FileName="v.39/EventActivity.cs" Line="13" Column="1" NotebookId="1" />
+      <File FileName="v.39/utility.cs" />
+      <File FileName="v.39/TicketSalesManager.cs" Line="22" Column="1" />
+      <File FileName="v.39/FirstStep.cs" NotebookId="1" />
+      <File FileName="v.39/Ticket.cs" Line="33" Column="18" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="v.39">
             <Node name="v.39" expanded="True">
-              <Node name="EventActivity.cs" selected="True" />
+              <Node name="Ticket.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
