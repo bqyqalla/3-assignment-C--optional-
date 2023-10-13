@@ -1,0 +1,29 @@
+[
+  {
+    "Weight": 1,
+    "Fish": false,
+    "Name": "Aborre"
+  },
+  {
+    "Weight": 2,
+    "Fish": false,
+    "Name": "Aborre"
+  },
+  {
+    "Weight": 3,
+    "Fish": true,
+    "Name": "Gädda"
+  },
+  {
+    "Weight": 4,
+    "Fish": true,
+    "Name": "Gädda"
+  },
+  {
+    "Weight": 5,
+    "Fish": true,
+    "Name": "Gädda"
+  }
+
+
+]

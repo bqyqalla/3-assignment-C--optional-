@@ -134,3 +134,141 @@ foreach (Concert concert in concert5)
     Console.WriteLine($"{concert.Id}, {concert.ReducedVenue}, {concert.Date}, {concert.Performer}, {concert.BeginsAt}, {concert.FullCapacitySales}");// FEEEELL återkom sen 
 }
 Console.WriteLine();
+
+
+// Exemptions First Step
+
+
+
+
+string Numbers = ("1,2,3,4,5,6,7,k,8,9,10");
+
+List<int> GetNumbers(string Numbers)
+{
+    string[] number = Numbers.Split(',');
+    List<int> numb = new List<int>();
+   
+
+for(int i = 0; i < number.Length; i++)
+    {
+        try
+        {
+            numb.Add(int.Parse(number[i]));
+
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Entry discarded");
+        }
+
+    }
+
+    return numb;
+}
+
+//Console.WriteLine(Numbers);
+
+List<int> numbers = GetNumbers(Numbers);
+
+
+     List<int> numbers1 = numbers
+        .OrderByDescending(x => x)
+        .ToList();
+foreach (int numb in numbers1)
+{
+    Console.WriteLine(numb);
+}
+Console.ReadLine();
+
+
+// Third Step
+
+
+
+//string filepath = @"aborre.txt";
+
+WordsDTO GetFile(string filePath)
+{
+    string[] borreFile=  { };
+    bool success;
+    string fail;
+
+
+
+
+    try
+    {
+
+        List<string> aborreList = new List<string>();
+
+        List<string> aborre = aborreList
+          .OrderBy(a => a)
+          .ToList();
+
+        foreach (string abor in aborre)
+        {
+            Console.WriteLine(abor);
+        }
+        Console.ReadLine();
+
+
+
+        string textAborre = File.ReadAllText(filePath);
+        borreFile = aborreList.ToArray();
+        foreach (var item in textAborre.Split(","))
+        {
+            aborreList.Add($"{item} ");
+        }
+       
+
+        success = true;
+        fail = "Success";
+
+
+    }
+
+
+    catch (Exception)
+    {
+        success = false;
+        fail = "File not found";
+        Console.WriteLine("File not found");
+       
+
+    }
+
+
+    
+
+    return new WordsDTO(borreFile, success, fail);
+}
+
+
+WordsDTO borreDTO =  GetFile("/Users/bledonqyqalla/Desktop/coding/v.39/3-assignment-C/v.39/v.39/aborre.txt");
+
+foreach(var borre in borreDTO.MyWord)
+{
+    Console.WriteLine(borre);
+}
+Console.WriteLine(borreDTO.MyBool);
+Console.WriteLine(borreDTO.MyString);
+
+
+
+//string fishdata = File.ReadAllText("/Users/bledonqyqalla/Desktop/coding/v.39/3-assignment-C/v.39/v.39/fish_data.json");
+//JsonSerializer.Deserialize<List<Fishdata>>(fishdata);
+
+//List<Fishdata> word = JsonSerializer.Deserialize<List<Fishdata>>(fishdata);
+
+//List<Fishdata> fishdatas = new List<Fishdata>();
+
+//List<Fishdata> fish1 = fishdatas
+//    .OrderBy(f => f.Weight)
+//    .ToList();
+//foreach (Fishdata fish in fish1)
+//{
+//    Console.WriteLine(fish);
+//}
+//Console.ReadLine();
+
+
